@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup
 
 setup(name='irobotf2f',
@@ -8,5 +9,8 @@ setup(name='irobotf2f',
       author='Eric Mattison',
       author_email='emattison@gmail.com',
       license='MIT',
-      packages=['irobot'],
+      packages=['irobotf2f'],
+      install_requires=[
+        "requests"
+      ],
       zip_safe=False)

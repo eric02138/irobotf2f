@@ -2,3 +2,4 @@ venv*
 *.pyc
 /dist/
 /*.egg-info
+apikey.conf

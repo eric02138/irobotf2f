@@ -1,4 +1,3 @@
-#!python
 # -*- coding: utf-8 -*-
 """
 iRobot Food2Fork Application Main Executable
@@ -11,17 +10,18 @@ import sys
 
 class App:
     def __init__(self):
-        f2f_api_key_path = os.path.join(os.path.abspath(os.sep), \
-                                        'porchrock',
-                                        'f2f_api_key.conf')
-        self.f2f_api_key_path = f2f_api_key_path
-        with open(self.f2f_api_key_path, "r") as f:
-            self.f2f_api_key = f.read()
+        f2f_api_key_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+        f2f_api_key_path = os.path.join(f2f_api_key_dir, 'apikey.conf')
+        print f2f_api_key_path
+        try:
+            with open(f2f_api_key_path, "r") as f:
+                self.f2f_api_key = f.read()
+        except Exception:
+            print "Could not read api key at {0}".format(f2f_api_key_path)
+            raise
 
 def main():
     app = App()
-    print app.f2f_api_key_path
-    print app.f2f_api_key
 
 if __name__ == "__main__":
     main()
