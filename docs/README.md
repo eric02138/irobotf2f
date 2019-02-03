@@ -6,12 +6,10 @@ Prompt a user to enter a list of ingredients.  Using the ingredient list, query 
 ## Installation
 
 OS X & Linux:
-
+* Change directory to irobotf2f directory
 ```
-TBD
+cd /path/to/irobotf2f
 ```
-
-Windows:
 * Create Virtual Environment using Python 2.7.x
 ```
 Code here
@@ -20,9 +18,27 @@ Code here
 ```
 Code here
 ```
-* Install Python dependencies
+* Run setup
 ```
-pip install -r requirements.txt
+python setup.py install
+```
+
+Windows:
+* Change directory to irobotf2f directory
+```
+cd C:\path\to\irobotf2f
+```
+* Create Virtual Environment using Python 2.7.x
+```
+Code here
+```
+* Activate Virtual Environment
+```
+Code here
+```
+* Run setup
+```
+python setup.py install
 ```
 
 ## Usage example
