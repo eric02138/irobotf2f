@@ -44,7 +44,6 @@ def create_api_key_file():
       # f2f_api_key_dir = os.path.abspath(os.path.dirname(__file__))
       f2f_api_key_dir = os.path.dirname(os.path.realpath(__file__))
       f2f_api_key_path = os.path.join(f2f_api_key_dir, 'apikey.conf')
-      sys.exit()
 
       print "This installer will attempt to create a key file here: {0}".format(f2f_api_key_path)
       try:
