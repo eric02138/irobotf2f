@@ -44,11 +44,18 @@ python setup.py install
 ## Usage example
 Basic Usage:
 ```
-cd irobotf2f
-python __init__.py
+python irobotf2f
+```
+
+Run Tests:
+```
+python -m unittest test
 ```
 
 ## Release History
+* 0.0.13
+    * Fixed os bug, testing raw input bug
+
 * 0.0.12
     * Unit tests passing
 

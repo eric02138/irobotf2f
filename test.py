@@ -4,6 +4,7 @@ Unit Tests
 """
 import os
 import unittest
+import __builtin__
 from contextlib import contextmanager
 from irobotf2f.__main__ import AppMgr, IngredientMgr, RequestMgr, RecipeMgr
 
@@ -15,10 +16,10 @@ def mockRawInput(mock):
     :param mock:
     :return:
     """
-    original_raw_input = __builtins__.raw_input
-    __builtins__.raw_input = lambda _: mock
+    original_raw_input = __builtin__.raw_input
+    __builtin__.raw_input = lambda _: mock
     yield
-    __builtins__.raw_input = original_raw_input
+    __builtin__.raw_input = original_raw_input
 
 class TestAppMgr(unittest.TestCase):
     def setUp(self):
