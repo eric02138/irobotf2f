@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import os
 import sys
 from setuptools import setup
 
@@ -39,8 +38,12 @@ def create_api_key_file():
 
       print "You have entered '{0}'.".format(user_supplied_key)
 
-      f2f_api_key_dir = os.path.abspath(os.path.dirname(__file__))
+      # f2f_api_key_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+      # print f2f_api_key_dir
+      # f2f_api_key_dir = os.path.abspath(os.path.dirname(__file__))
+      f2f_api_key_dir = os.path.dirname(os.path.realpath(__file__))
       f2f_api_key_path = os.path.join(f2f_api_key_dir, 'apikey.conf')
+      sys.exit()
 
       print "This installer will attempt to create a key file here: {0}".format(f2f_api_key_path)
       try:

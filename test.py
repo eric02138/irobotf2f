@@ -2,9 +2,10 @@
 """
 Unit Tests
 """
+import os
 import unittest
 from contextlib import contextmanager
-from irobotf2f import AppMgr, IngredientMgr, RequestMgr, RecipeMgr
+from irobotf2f.__main__ import AppMgr, IngredientMgr, RequestMgr, RecipeMgr
 
 @contextmanager
 def mockRawInput(mock):
@@ -27,6 +28,7 @@ class TestAppMgr(unittest.TestCase):
         """
         Test that the api key is set and that continue is True
         """
+        print os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
         self.assertEqual(len(self.app_mgr.f2f_api_key), 32)
         self.assertEqual(self.app_mgr._continue, True)
 
