@@ -18,9 +18,8 @@ python -m virtualenv env
 ```
 source env/bin/activate
 ```
-* Run pip
+* Run setup
 ```
-pip install .
 python setup.py install
 ```
 
@@ -39,7 +38,6 @@ py -m virtualenv env
 ```
 * Run setup
 ```
-pip install .
 python setup.py install
 ```
 
