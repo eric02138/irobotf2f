@@ -12,14 +12,15 @@ cd /path/to/irobotf2f
 ```
 * Create Virtual Environment using Python 2.7.x
 ```
-Code here
+python -m virtualenv env
 ```
 * Activate Virtual Environment
 ```
-Code here
+source env/bin/activate
 ```
-* Run setup
+* Run pip
 ```
+pip install .
 python setup.py install
 ```
 
@@ -30,24 +31,28 @@ cd C:\path\to\irobotf2f
 ```
 * Create Virtual Environment using Python 2.7.x
 ```
-Code here
+py -m virtualenv env
 ```
 * Activate Virtual Environment
 ```
-Code here
+.\env\Scripts\activate
 ```
 * Run setup
 ```
+pip install .
 python setup.py install
 ```
 
 ## Usage example
 Basic Usage:
 ```
-python main.py
+cd irobotf2f
+python __init__.py
 ```
 
 ## Release History
+* 0.0.12
+    * Unit tests passing
 
 * 0.0.1
     * Work in progress
